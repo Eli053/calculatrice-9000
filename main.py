@@ -11,9 +11,9 @@ from tkinter import * # Tkinter
 # CLASSE :
 #---------
 class Calculator():
-    def __init__(self): # Construction
-        self.phase1 = 0 # Premier nombre
-        self.phase2 = 0 # Deuxième nombre
+    def __init__(self): 
+        self.phase1 = 0 
+        self.phase2 = 0 
         self.final = 0 # Valeur finale
         self.entry = StringVar() # Capte les valeurs écrit
         self.text = "" # Nombre écrir par l'utilisateur
