@@ -186,3 +186,25 @@ BM = Button(fen, text="X", command=ButtonM, width=4, height=2, bg="gold", fg="bl
 BE = Button(fen, text="=", command=ButtonE, width=4, height=1, bg="blue", fg="white", relief=RIDGE).place(x=150, y=205) # Button = (égale)
 
 fen.mainloop() # Gestion de la fenêtre
+class Calculatrice:
+    def __init__(self):
+        self.historique = []
+
+    def ajouter(self, a, b):
+        resultat = a + b
+        self.historique.append(f"{a} + {b} = {resultat}")
+        return resultat
+
+    def soustraire(self, a, b):
+        resultat = a - b
+        self.historique.append(f"{a} - {b} = {resultat}")
+        return resultat
+
+    def afficher_historique(self):
+        return '\n'.join(self.historique)
+
+calc = Calculatrice()
+calc.ajouter(5, 3)
+calc.soustraire(10, 7)
+print(calc.afficher_historique())
+
